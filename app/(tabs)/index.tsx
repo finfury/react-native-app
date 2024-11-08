@@ -1,5 +1,9 @@
+import HeaderLayout from '@/app/(header)/_layout'
+
+
 export default function HomeTab() {
     return <div>
-        123 123
+        <HeaderLayout />
+        123
     </div>
 }

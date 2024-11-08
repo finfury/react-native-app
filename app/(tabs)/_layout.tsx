@@ -1,18 +1,16 @@
-import {Tabs} from 'expo-router';
 import React from 'react';
-
+import {Tabs} from 'expo-router';
 import {TabBarIcon} from '@/components/navigation/TabBarIcon';
 import {Colors} from '@/constants/Colors';
-import {useColorScheme} from '@/hooks/useColorScheme';
 
 
 export default function TabLayout() {
-    const colorScheme = useColorScheme();
-
     return (
         <Tabs screenOptions={{
-            tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-            tabBarItemStyle: {flexDirection: 'column'},
+            tabBarStyle: {backgroundColor: Colors.blue6, paddingVertical: 15},
+            tabBarActiveTintColor: Colors.blue2,
+            tabBarInactiveTintColor: Colors.white,
+            tabBarItemStyle: {flexDirection: 'column', gap: 5},
             headerShown: false,
         }}>
             <Tabs.Screen name="index" options={{
